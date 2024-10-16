@@ -3,6 +3,13 @@
 
 ## Terminal 1
 
+### Clone this project to the home directory of your machine and run the commands below
+
+```
+cd navigation2
+
+```
+
 ```
 sudo ./nav2-rviz2-container.sh
 
@@ -21,6 +28,7 @@ ros2 launch nav2_bringup localization_launch.py map:=map_cam_odom_exp_170601.yam
 ```
 
 ## Terminal 2
+
 
 ```
 sudo docker exec -it ros-utilities bash
@@ -43,5 +51,7 @@ rviz2
 ```
 ros2 launch nav2_bringup navigation_launch.py
 ```
+
+
 
 
