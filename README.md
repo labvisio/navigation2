@@ -1,4 +1,4 @@
-# navigation2
+# Navigation2
 
 
 ## Terminal 1
