@@ -3,12 +3,15 @@
 
 ## Terminal 1
 
-### Clone this project to the home directory of your machine and run the commands below
+Clone this project to the home directory of your machine and run the commands below
 
 ```
 cd navigation2
 
 ```
+
+In the ```nav2-rviz2-container``` file, update the ```USER``` variable to match your machine's username
+
 
 ```
 sudo ./nav2-rviz2-container.sh
