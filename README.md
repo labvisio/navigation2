@@ -51,6 +51,14 @@ rviz2
 ## Terminal 3
 
 ```
+sudo docker exec -it ros-utilities bash
+```
+
+```
+source opt/ros/humble/setup.bash
+```
+
+```
 ros2 launch nav2_bringup navigation_launch.py
 ```
 
