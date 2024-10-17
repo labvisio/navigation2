@@ -5,6 +5,7 @@
 # It still not working, try running the script as root.
 
 XAUTH=/tmp/.docker.xauth
+USER=matheus 
 
 echo "Preparing Xauthority data..."
 xauth_list=$(xauth nlist :0 | tail -n 1 | sed -e 's/^..../ffff/')
@@ -32,10 +33,10 @@ docker run -it\
     --env="DISPLAY=$DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-    --volume="/home/matheus/navigation2/nav2/params:/opt/ros/humble/share/nav2_bringup/params" \
-    --volume="/home/matheus/navigation2/maps:/opt/ros/humble/share/nav2_bringup/maps" \
-    --volume="/home/matheus/navigation2/rviz_config:/rviz_config" \
-    --volume="/home/matheus/navigation2/robot_localization/params:/opt/ros/humble/share/robot_localization/params" \
+    --volume="/home/$USER/navigation2/nav2/params:/opt/ros/humble/share/nav2_bringup/params" \
+    --volume="/home/$USER/navigation2/maps:/opt/ros/humble/share/nav2_bringup/maps" \
+    --volume="/home/$USER/navigation2/rviz_config:/rviz_config" \
+    --volume="/home/$USER/navigation2/robot_localization/params:/opt/ros/humble/share/robot_localization/params" \
     --env="XAUTHORITY=$XAUTH" \
     --volume="$XAUTH:$XAUTH" \
     --net=host \
